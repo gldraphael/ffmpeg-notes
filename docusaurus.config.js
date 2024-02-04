@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'ffmpeg notes',
-  tagline: 'Unofficial ffmpeg notes',
+  tagline: 'Unofficial ffmpeg docs',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -63,17 +63,16 @@ const config = {
       navbar: {
         title: 'ffmpeg notes',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'logo',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'quickstartSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Quickstart',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/gldraphael/ffmpeg-notes',
             label: 'GitHub',
@@ -88,25 +87,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                label: 'Quickstart',
+                to: '/quickstart',
               },
             ],
           },
@@ -119,16 +101,30 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/gldraphael/ffmpeg-notes',
+              },
+            ],
+          },
+          {
+            title: 'Links',
+            items: [
+              {
+                label: 'FFmpeg.org (official website)',
+                href: 'https://ffmpeg.org/',
+              },
+              {
+                label: 'FFmpeg git repo',
+                href: 'https://git.ffmpeg.org/ffmpeg.git',
               },
             ],
           },
         ],
-        copyright: `ffmpeg-notes © ${new Date().getFullYear()} is licensed under CC BY-SA 4.0`,
+        copyright: `<p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p>`
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ['bash', 'makefile'],
       },
     }),
 };
